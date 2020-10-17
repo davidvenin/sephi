@@ -1,0 +1,23 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@components": "./src/components",
+          "@api": "./src/api",
+          "@models": "./src/models",
+          "@hooks": "./src/hooks",
+          "@context": "./src/context",
+          "@typeDefs": "./src/types",
+          "@utils": "./src/utils",
+          "@glossy": "./src/glossy",
+          "@public": "./public"
+        }
+      }
+    ],
+    ["styled-components", { "ssr": true }]
+  ]
+}
