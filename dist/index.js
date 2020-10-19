@@ -47,7 +47,7 @@ var app = next_1.default({ dev: dev });
 var handle = app.getRequestHandler();
 var port = process.env.PORT || 3000;
 var options = {
-    target: "http://134.209.198.0",
+    target: "134.209.198.0",
     changeOrigin: true,
     ws: true,
     router: {},
@@ -63,7 +63,7 @@ var proxy = http_proxy_middleware_1.createProxyMiddleware(options);
             case 1:
                 _a.sent();
                 server = express_1.default();
-                server.use("http://localhost:3000/api", proxy);
+                server.use("http://134.209.198.0/api/", proxy);
                 server.all("*", function (req, res) {
                     return handle(req, res);
                 });

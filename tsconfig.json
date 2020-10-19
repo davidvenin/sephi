@@ -15,7 +15,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "@components/*": ["src/components/*"],
       "@api/*": ["src/api/*"],
@@ -28,12 +28,13 @@
       "@public/*": ["public/*"]
     }
   },
-  "exclude": ["node_modules"],
+  // "exclude": ["node_modules"],
   "include": [
     "**/*.ts",
     "**/*.tsx",
     "next-env.d.ts",
     "next.config.js",
     "server/index.js"
-  ]
+  ],
+  "exclude": ["node_modules"]
 }
